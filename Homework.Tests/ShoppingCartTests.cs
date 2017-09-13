@@ -10,21 +10,29 @@ namespace HomeWork.Tests
 {
     public class ShoppingCartTests
     {
-        [Fact()]
-        public void CheckOutTest()
+        [Theory]
+        [MemberData(nameof(HaryyPotterData))]
+        public void CheckOutTest(List<Book> bookList,decimal excepted)
         {
 
             //// Arrange 
-            var excepted = 100;
             var target = new ShoppingCart();
-            var bookList = new List<Book>();
-            bookList.Add(new Book { price = 100, episode = 1 });
             
             //// Act
             var actual = target.CheckOut(bookList);
 
             //// Assert
             Assert.Equal(excepted, actual);
+        }
+
+        public static IEnumerable<object[]> HaryyPotterData
+        {
+            get
+            {
+                return new[] {
+                    new object[] { new List<Book> { new Book { price = 100, episode = 1 } } ,100 }
+                };
+            }
         }
     }
 }
