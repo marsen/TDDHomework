@@ -16,6 +16,10 @@ namespace HomeWork
             {
                 totalPrice = (1-0.05m) * totalPrice;
             }
+            else if (totalEpisode == 3)
+            {
+                totalPrice = (1 - 0.1m) * totalPrice;
+            }
             return totalPrice;
         }
     }
