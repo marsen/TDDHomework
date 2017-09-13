@@ -20,6 +20,10 @@ namespace HomeWork
             {
                 totalPrice = (1 - 0.1m) * totalPrice;
             }
+            else if (totalEpisode == 4)
+            {
+                totalPrice = (1 - 0.2m) * totalPrice;
+            }
             return totalPrice;
         }
     }
