@@ -31,6 +31,7 @@ namespace HomeWork.Tests
                 return new[] {
                     new object[] { new List<Book> { new Book { price = 100, episode = 1 } } ,100 },
                     new object[] { new List<Book> { new Book { price = 100, episode = 1 }, new Book { price = 100, episode = 2 } } ,200 * (1 - 0.05) },
+                    new object[] { new List<Book> { new Book { price = 100, episode = 1 }, new Book { price = 100, episode = 2 }, new Book { price = 100, episode = 3 } } ,300 * (1 - 0.1) },
                 };
             }
         }
