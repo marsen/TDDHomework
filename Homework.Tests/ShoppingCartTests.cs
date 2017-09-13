@@ -13,6 +13,15 @@ namespace HomeWork.Tests
         [Fact()]
         public void CheckOutTest()
         {
+
+            //// Arrange 
+            var excepted = 100;
+            var target = new ShoppingCart();
+            var bookList = new List<Book>();
+            //// Act
+            var actual = target.CheckOut(bookList);            
+                
+            //// Assert
             Assert.True(false, "This test needs an implementation");
         }
     }

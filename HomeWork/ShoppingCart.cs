@@ -8,7 +8,7 @@ namespace HomeWork
 {
     public class ShoppingCart
     {
-        public decimal CheckOut()
+        public decimal CheckOut(List<Book> bookList)
         {
             return 0M;
         }
