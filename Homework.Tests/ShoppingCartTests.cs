@@ -54,6 +54,12 @@ namespace HomeWork.Tests
                         new Book { price = 100, episode = 4 },
                         new Book { price = 100, episode = 5 }} ,
                         500 * (1 - 0.25) },
+                    new object[] { new List<Book> {
+                        new Book { price = 100, episode = 1 },
+                        new Book { price = 100, episode = 2 },
+                        new Book { price = 100, episode = 3 },
+                        new Book { price = 100, episode = 1 }} ,
+                        300 * (1 - 0.1) + 100 },
                 };
             }
         }
