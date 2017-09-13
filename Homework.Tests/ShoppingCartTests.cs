@@ -14,7 +14,6 @@ namespace HomeWork.Tests
         [MemberData(nameof(HaryyPotterData))]
         public void CheckOutTest(List<Book> bookList,decimal excepted)
         {
-
             //// Arrange 
             var target = new ShoppingCart();
             

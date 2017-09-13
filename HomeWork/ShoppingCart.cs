@@ -10,7 +10,13 @@ namespace HomeWork
     {
         public decimal CheckOut(List<Book> bookList)
         {
-            return 100M;
+            var totalPrice = bookList.Sum(x => x.price);
+            var totalEpisode = bookList.GroupBy(x => x.episode).Count();
+            if (totalEpisode == 2)
+            {
+                totalPrice = (1-0.05m) * totalPrice;
+            }
+            return totalPrice;
         }
     }
 }
