@@ -1,6 +1,0 @@
-D:\Repo\SandBox\tddHomework\HomeWork\HomeWork\bin\Debug\HomeWork.exe.config
-D:\Repo\SandBox\tddHomework\HomeWork\HomeWork\bin\Debug\HomeWork.exe
-D:\Repo\SandBox\tddHomework\HomeWork\HomeWork\bin\Debug\HomeWork.pdb
-D:\Repo\SandBox\tddHomework\HomeWork\HomeWork\obj\Debug\Homework.csprojResolveAssemblyReference.cache
-D:\Repo\SandBox\tddHomework\HomeWork\HomeWork\obj\Debug\HomeWork.exe
-D:\Repo\SandBox\tddHomework\HomeWork\HomeWork\obj\Debug\HomeWork.pdb
