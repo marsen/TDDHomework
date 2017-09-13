@@ -12,18 +12,22 @@ namespace HomeWork
         {
             var totalPrice = bookList.Sum(x => x.price);
             var totalEpisode = bookList.GroupBy(x => x.episode).Count();
-            if (totalEpisode == 2)
+            var discount = 0m;
+            switch (totalEpisode)
             {
-                totalPrice = (1-0.05m) * totalPrice;
+                case 2:
+                    discount = 0.05m;
+                    break;
+                case 3:
+                    discount = 0.1m;
+                    break;
+                case 4:
+                    discount = 0.2m;
+                    break;
+                default:
+                    break;
             }
-            else if (totalEpisode == 3)
-            {
-                totalPrice = (1 - 0.1m) * totalPrice;
-            }
-            else if (totalEpisode == 4)
-            {
-                totalPrice = (1 - 0.2m) * totalPrice;
-            }
+            totalPrice = (1 - discount) * totalPrice;
             return totalPrice;
         }
     }
