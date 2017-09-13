@@ -1,0 +1,17 @@
+D:\Repo\SandBox\tddHomework\HomeWork\Homework.Tests\bin\Debug\xunit.abstractions.dll
+D:\Repo\SandBox\tddHomework\HomeWork\Homework.Tests\bin\Debug\xunit.runner.visualstudio.testadapter.dll
+D:\Repo\SandBox\tddHomework\HomeWork\Homework.Tests\bin\Debug\xunit.runner.utility.desktop.dll
+D:\Repo\SandBox\tddHomework\HomeWork\Homework.Tests\bin\Debug\xunit.execution.desktop.dll
+D:\Repo\SandBox\tddHomework\HomeWork\Homework.Tests\bin\Debug\Homework.Tests.dll
+D:\Repo\SandBox\tddHomework\HomeWork\Homework.Tests\bin\Debug\Homework.Tests.pdb
+D:\Repo\SandBox\tddHomework\HomeWork\Homework.Tests\bin\Debug\HomeWork.exe
+D:\Repo\SandBox\tddHomework\HomeWork\Homework.Tests\bin\Debug\xunit.assert.dll
+D:\Repo\SandBox\tddHomework\HomeWork\Homework.Tests\bin\Debug\xunit.core.dll
+D:\Repo\SandBox\tddHomework\HomeWork\Homework.Tests\bin\Debug\HomeWork.pdb
+D:\Repo\SandBox\tddHomework\HomeWork\Homework.Tests\bin\Debug\xunit.assert.pdb
+D:\Repo\SandBox\tddHomework\HomeWork\Homework.Tests\bin\Debug\xunit.assert.xml
+D:\Repo\SandBox\tddHomework\HomeWork\Homework.Tests\bin\Debug\xunit.core.pdb
+D:\Repo\SandBox\tddHomework\HomeWork\Homework.Tests\bin\Debug\xunit.core.xml
+D:\Repo\SandBox\tddHomework\HomeWork\Homework.Tests\obj\Debug\Homework.Tests.csprojResolveAssemblyReference.cache
+D:\Repo\SandBox\tddHomework\HomeWork\Homework.Tests\obj\Debug\Homework.Tests.dll
+D:\Repo\SandBox\tddHomework\HomeWork\Homework.Tests\obj\Debug\Homework.Tests.pdb
