@@ -18,11 +18,13 @@ namespace HomeWork.Tests
             var excepted = 100;
             var target = new ShoppingCart();
             var bookList = new List<Book>();
+            bookList.Add(new Book { price = 100, episode = 1 });
+            
             //// Act
-            var actual = target.CheckOut(bookList);            
-                
+            var actual = target.CheckOut(bookList);
+
             //// Assert
-            Assert.True(false, "This test needs an implementation");
+            Assert.Equal(excepted, actual);
         }
     }
 }
