@@ -10,7 +10,7 @@ namespace HomeWork
     {
         public decimal CheckOut(List<Book> bookList)
         {
-            return 0M;
+            return 100M;
         }
     }
 }
