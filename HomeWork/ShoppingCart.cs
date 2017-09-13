@@ -24,6 +24,9 @@ namespace HomeWork
                 case 4:
                     discount = 0.2m;
                     break;
+                case 5:
+                    discount = 0.25m;
+                    break;
                 default:
                     break;
             }

@@ -53,7 +53,7 @@ namespace HomeWork.Tests
                         new Book { price = 100, episode = 3 },
                         new Book { price = 100, episode = 4 },
                         new Book { price = 100, episode = 5 }} ,
-                        400 * (1 - 0.25) },
+                        500 * (1 - 0.25) },
                 };
             }
         }
