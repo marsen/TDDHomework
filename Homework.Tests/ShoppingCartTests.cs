@@ -12,11 +12,11 @@ namespace HomeWork.Tests
     {
         [Theory]
         [MemberData(nameof(HaryyPotterData))]
-        public void CheckOutTest(List<Book> bookList,decimal excepted)
+        public void CheckOutTest(List<Book> bookList, decimal excepted)
         {
             //// Arrange 
             var target = new ShoppingCart();
-            
+
             //// Act
             var actual = target.CheckOut(bookList);
 
