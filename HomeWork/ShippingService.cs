@@ -15,7 +15,7 @@ namespace HomeWork
         /// <returns></returns>
         public List<string> GetShippingType(int qty)
         {
-            throw new NotImplementedException();
+            return new List<string> { "BlackCat" };
         }
     }
 }
