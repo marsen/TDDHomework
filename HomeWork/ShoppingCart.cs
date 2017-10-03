@@ -82,5 +82,27 @@ namespace HomeWork
 
             return result;
         }
+
+        /// <summary>
+        /// CheckOut
+        /// </summary>
+        /// <param name="bookList">bookList</param>
+        /// <returns>price</returns>
+        public decimal DiscountCheckOut(string memberType ,List<Book> bookList)
+        {
+            var totalPrice = 0m;
+            totalPrice = CheckOut(bookList);
+
+            if (memberType == "VIP" && totalPrice >= 500)
+            {
+                totalPrice *= 0.8m;
+            }
+            else if (memberType == "Normal" && totalPrice >= 1000 && bookList.Count >= 3)
+            {
+                totalPrice *= 0.85m;
+            }
+
+            return totalPrice;
+        }
     }
 }
