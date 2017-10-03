@@ -82,5 +82,17 @@ namespace HomeWork
 
             return result;
         }
+
+        /// <summary>
+        /// CheckOut
+        /// </summary>
+        /// <param name="bookList">bookList</param>
+        /// <returns>price</returns>
+        public decimal DiscountCheckOut(string memberType ,List<Book> bookList)
+        {
+            var totalPrice = 0m;
+
+            return totalPrice;
+        }
     }
 }
