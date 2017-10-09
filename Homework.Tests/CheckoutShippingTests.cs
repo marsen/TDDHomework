@@ -11,12 +11,13 @@ namespace HomeWork.Tests
     public class CheckoutShippingTests
     {
         [Fact()]
-        public void CheckOut_Shipping_With_BlackCat()
+        public void CheckOut_Shipping_With_BlackCat_ShippingFee_is_100()
         {
 
             //// Arrange 
             var target = new ShoppingCart();
             var excepted = "BlackCat";
+            var exceptedFee = 100;
             var bookList = new List<Book>
             {
                 new Book
@@ -29,9 +30,12 @@ namespace HomeWork.Tests
             //// Act
             target.CheckOut(bookList);
             var actual = target.ShippingType;
+            var actualFee = target.ShippingFee;
 
             //// Assert
             Assert.Equal(excepted, actual);
+            Assert.Equal(exceptedFee, actualFee);
         }
+
     }
 }
