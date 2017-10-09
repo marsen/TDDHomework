@@ -13,7 +13,25 @@ namespace HomeWork.Tests
         [Fact()]
         public void CheckOut_Shipping_With_BlackCat()
         {
-            Assert.True(false, "This test needs an implementation");
+
+            //// Arrange 
+            var target = new ShoppingCart();
+            var excepted = "BlackCat";
+            var bookList = new List<Book>
+            {
+                new Book
+                {
+                    price = 100,
+                    episode = 1
+                }
+            };
+
+            //// Act
+            target.CheckOut(bookList);
+            var actual = target.ShippingType;
+
+            //// Assert
+            Assert.Equal(excepted, actual);
         }
     }
 }

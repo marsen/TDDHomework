@@ -50,6 +50,11 @@ namespace HomeWork
         }
 
         /// <summary>
+        /// 物流
+        /// </summary>
+        public string ShippingType { get; private set; }
+
+        /// <summary>
         /// 將不同的集數的書合成一套打包,
         /// EX: 所有集數為 1,1,2,2,3,4,5
         /// 會打包成 1,2,3,4,5 與 1,2 兩包
