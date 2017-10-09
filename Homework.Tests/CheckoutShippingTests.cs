@@ -40,5 +40,55 @@ namespace HomeWork.Tests
             //// Assert
             actual.ShouldBeEquivalentTo(excepted);
         }
+
+        [Fact]
+        public void CheckOut_Over_5_Books_Shipping_Only_BlackCat_Fee_is_100()
+        {
+            //// Arrange
+            var target = new ShoppingCart();
+            var excepted = new List<Shipping>() {
+                new Shipping()
+                {
+                    Type = ShippingTypeEnum.BlackCat,
+                    Fee = 100
+                }
+            };
+
+            var bookList = new List<Book>
+            {
+                new Book
+                {
+                    price = 100,
+                    episode = 1
+                },
+                new Book
+                {
+                    price = 100,
+                    episode = 1
+                },
+                new Book
+                {
+                    price = 100,
+                    episode = 1
+                },
+                 new Book
+                {
+                    price = 100,
+                    episode = 1
+                },
+                new Book
+                {
+                    price = 100,
+                    episode = 1
+                }
+            };
+
+            //// Act
+            target.CheckOut(bookList);
+            var actual = target.GetShippingList();
+
+            //// Assert
+            actual.ShouldBeEquivalentTo(excepted);
+        }
     }
 }
