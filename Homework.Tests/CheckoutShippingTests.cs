@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using FluentAssertions;
 using Xunit;
 
 namespace HomeWork.Tests
@@ -29,7 +30,7 @@ namespace HomeWork.Tests
             var actual = target.Shipping;
 
             //// Assert
-            Assert.Equal(excepted, actual);
+            actual.ShouldBeEquivalentTo(excepted);
         }
     }
 }
