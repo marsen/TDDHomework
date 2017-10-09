@@ -47,9 +47,13 @@ namespace HomeWork
             }
 
             this.ShippingType = "BlackCat";
+            this.ShippingFee = 100;
+
             return totalPrice;
         }
 
+        public decimal ShippingFee { get; private set; }
+       
         /// <summary>
         /// 物流
         /// </summary>
