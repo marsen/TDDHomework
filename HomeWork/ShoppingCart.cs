@@ -55,7 +55,15 @@ namespace HomeWork
             return totalPrice;
         }
 
-        public List<Shipping> ShippingList { get; private set; }     
+        public List<Shipping> GetShippingList()
+        {
+            return this.ShippingList;
+        }
+
+        /// <summary>
+        /// 購物車可用的物流方式
+        /// </summary>
+        private List<Shipping> ShippingList = new List<Shipping>();    
 
         /// <summary>
         /// 將不同的集數的書合成一套打包,

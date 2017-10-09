@@ -30,7 +30,7 @@ namespace HomeWork.Tests
 
             //// Act
             target.CheckOut(bookList);
-            var actual = target.ShippingList;
+            var actual = target.GetShippingList();
 
             //// Assert
             actual.ShouldBeEquivalentTo(excepted);
