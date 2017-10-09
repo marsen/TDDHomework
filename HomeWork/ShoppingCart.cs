@@ -45,12 +45,21 @@ namespace HomeWork
                 var discount = this.DiscountDic[totalEpisode];
                 totalPrice += (1 - discount) * packagePrice;
             }
+
             var shipping = new Shipping()
             {
                 Type = "BlackCat",
                 Fee = 100
             };
             this.ShippingList.Add(shipping);
+            if (bookList.Count <= 5)
+            {
+                this.ShippingList.Add(new Shipping()
+                {
+                    Type = "Post",
+                    Fee = 50
+                });
+            }
 
             return totalPrice;
         }
