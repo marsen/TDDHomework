@@ -52,7 +52,7 @@ namespace HomeWork
                 Fee = 100
             };
             this.ShippingList.Add(shipping);
-            if (bookList.Count <= 5)
+            if (bookList.Count < 5)
             {
                 this.ShippingList.Add(new Shipping()
                 {
