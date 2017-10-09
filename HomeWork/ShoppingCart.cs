@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace HomeWork
@@ -45,7 +46,7 @@ namespace HomeWork
                 var discount = this.DiscountDic[totalEpisode];
                 totalPrice += (1 - discount) * packagePrice;
             }
-
+            // 物流 功能
             var shipping = new Shipping()
             {
                 Type = ShippingTypeEnum.BlackCat,
@@ -60,6 +61,8 @@ namespace HomeWork
                     Fee = 50
                 });
             }
+            // 金流 功能
+            File.WriteAllText("D:\\Log.txt", totalPrice.ToString());
 
             return totalPrice;
         }
