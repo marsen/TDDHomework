@@ -48,7 +48,7 @@ namespace HomeWork
 
             var shipping = new Shipping()
             {
-                Type = "BlackCat",
+                Type = ShippingTypeEnum.BlackCat,
                 Fee = 100
             };
             this.ShippingList.Add(shipping);
@@ -56,7 +56,7 @@ namespace HomeWork
             {
                 this.ShippingList.Add(new Shipping()
                 {
-                    Type = "Post",
+                    Type = ShippingTypeEnum.Post,
                     Fee = 50
                 });
             }

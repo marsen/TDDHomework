@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace HomeWork
 {
-    public class Shipping
+    public enum ShippingTypeEnum
     {
-        public ShippingTypeEnum Type { get; set; }
-        public decimal Fee { get; set; }
-
+        BlackCat,
+        Post
     }
 }

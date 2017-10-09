@@ -14,12 +14,12 @@ namespace HomeWork.Tests
             var excepted = new List<Shipping>() {
                 new Shipping()
                 {
-                    Type = "BlackCat",
+                    Type = ShippingTypeEnum.BlackCat,
                     Fee = 100
                 },
                 new Shipping()
                 {
-                    Type = "Post",
+                    Type = ShippingTypeEnum.Post,
                     Fee = 50
                 }
             };
