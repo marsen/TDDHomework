@@ -45,19 +45,17 @@ namespace HomeWork
                 var discount = this.DiscountDic[totalEpisode];
                 totalPrice += (1 - discount) * packagePrice;
             }
-
-            this.ShippingType = "BlackCat";
-            this.ShippingFee = 100;
+            var shipping = new Shipping()
+            {
+                Type = "BlackCat",
+                Fee = 100
+            };
+            this.Shipping = shipping;
 
             return totalPrice;
         }
 
-        public decimal ShippingFee { get; private set; }
-       
-        /// <summary>
-        /// 物流
-        /// </summary>
-        public string ShippingType { get; private set; }
+        public Shipping Shipping { get; private set; }     
 
         /// <summary>
         /// 將不同的集數的書合成一套打包,
