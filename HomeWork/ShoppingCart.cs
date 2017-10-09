@@ -46,6 +46,7 @@ namespace HomeWork
                 totalPrice += (1 - discount) * packagePrice;
             }
 
+            this.ShippingType = "BlackCat";
             return totalPrice;
         }
 
