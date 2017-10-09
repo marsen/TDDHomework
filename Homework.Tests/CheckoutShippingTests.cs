@@ -16,6 +16,11 @@ namespace HomeWork.Tests
                 {
                     Type = "BlackCat",
                     Fee = 100
+                },
+                new Shipping()
+                {
+                    Type = "Post",
+                    Fee = 50
                 }
             };
 
