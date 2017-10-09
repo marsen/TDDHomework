@@ -50,12 +50,12 @@ namespace HomeWork
                 Type = "BlackCat",
                 Fee = 100
             };
-            this.Shipping = shipping;
+            this.ShippingList.Add(shipping);
 
             return totalPrice;
         }
 
-        public Shipping Shipping { get; private set; }     
+        public List<Shipping> ShippingList { get; private set; }     
 
         /// <summary>
         /// 將不同的集數的書合成一套打包,

@@ -11,11 +11,14 @@ namespace HomeWork.Tests
         {
             //// Arrange
             var target = new ShoppingCart();
-            var excepted = new Shipping()
-            {
-                Type = "BlackCat",
-                Fee = 100
+            var excepted = new List<Shipping>() {
+                new Shipping()
+                {
+                    Type = "BlackCat",
+                    Fee = 100
+                }
             };
+
             var bookList = new List<Book>
             {
                 new Book
@@ -27,7 +30,7 @@ namespace HomeWork.Tests
 
             //// Act
             target.CheckOut(bookList);
-            var actual = target.Shipping;
+            var actual = target.ShippingList;
 
             //// Assert
             actual.ShouldBeEquivalentTo(excepted);
