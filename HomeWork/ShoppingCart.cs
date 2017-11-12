@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
@@ -36,6 +37,8 @@ namespace HomeWork
         /// <returns>price</returns>
         public decimal CheckOut(List<Book> bookList)
         {
+            //Checked BookList
+            this.VaildateBooks(bookList);
             var packageList = this.PackageBookList(bookList);
             var totalPrice = 0m;
 
@@ -65,6 +68,14 @@ namespace HomeWork
             this.Log(totalPrice);
 
             return totalPrice;
+        }
+
+        protected virtual void VaildateBooks(List<Book> bookList)
+        {
+            if (bookList.Count > 30)
+            {
+                throw new ApplicationException("Up to 30 books");
+            }
         }
 
         protected virtual void Log(decimal totalPrice)

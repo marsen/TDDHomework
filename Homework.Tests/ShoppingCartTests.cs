@@ -207,6 +207,7 @@ namespace HomeWork.Tests
             //// Act
             target.CheckOut(bookList);
             var actual = target.isChecked;
+
             //// Assert
             actual.Should().Be(expected);
         }
@@ -218,8 +219,14 @@ namespace HomeWork.Tests
 
             protected override void Log(decimal totalPrice)
             {
-                this.isLoged = true;
                 base.Log(totalPrice);
+                this.isLoged = true;
+            }
+
+            protected override void VaildateBooks(List<Book> bookList)
+            {
+                base.VaildateBooks(bookList);
+                this.isChecked = true;
             }
         }
     }
