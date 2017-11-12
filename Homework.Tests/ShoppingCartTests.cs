@@ -189,6 +189,8 @@ namespace HomeWork.Tests
         #endregion
 
         [Theory]
+        [InlineData(0, true)]
+        [InlineData(1, true)]
         [InlineData(30, true)]
         [InlineData(31, false)]
         public void BookList_limit_is_30_books_Test(int bookCount, bool expected)
@@ -216,7 +218,7 @@ namespace HomeWork.Tests
         private class StubShoppingCart : ShoppingCart
         {
             public bool isLoged;
-            internal object isChecked;
+            public bool isChecked;
 
             protected override void Log(decimal totalPrice)
             {
@@ -226,8 +228,14 @@ namespace HomeWork.Tests
 
             protected override void VaildateBooks(List<Book> bookList)
             {
-                base.VaildateBooks(bookList);
-                this.isChecked = true;
+                try
+                {
+                    base.VaildateBooks(bookList);
+                    this.isChecked = true;
+                }
+                catch (Exception)
+                {
+                }
             }
         }
     }
