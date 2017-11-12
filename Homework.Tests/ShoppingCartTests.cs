@@ -190,6 +190,7 @@ namespace HomeWork.Tests
 
         [Theory]
         [InlineData(30, true)]
+        [InlineData(31, false)]
         public void BookList_limit_is_30_books_Test(int bookCount, bool expected)
         {
             //// Arrange
