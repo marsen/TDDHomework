@@ -183,9 +183,24 @@ namespace HomeWork.Tests
 
         #region
         ////// Scenario:檢查總共不能超過 30 本
-        ////// Given:購物車已有書本30
+        ////// Given:購物車已有書本 0 本
         ////// When:購物車結帳時
         ////// Then:檢查通過
+
+        ////// Scenario:檢查總共不能超過 30 本
+        ////// Given:購物車已有書本 1 本
+        ////// When:購物車結帳時
+        ////// Then:檢查通過
+
+        ////// Scenario:檢查總共不能超過 30 本
+        ////// Given:購物車已有書本 30 本
+        ////// When:購物車結帳時
+        ////// Then:檢查通過
+
+        ////// Scenario:檢查總共不能超過 30 本
+        ////// Given:購物車已有書本 1 本
+        ////// When:購物車結帳時
+        ////// Then:檢查不通過
         #endregion
 
         [Theory]
@@ -217,7 +232,7 @@ namespace HomeWork.Tests
 
         #region
         ////// Scenario:檢查總共不能超過 30 本
-        ////// Given:購物車已有書本31
+        ////// Given:購物車已有書本 31 本
         ////// When:購物車結帳時
         ////// Then:拋出例外
         #endregion
