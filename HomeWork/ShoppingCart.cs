@@ -62,9 +62,14 @@ namespace HomeWork
                 });
             }
             // 金流 功能
-            File.WriteAllText("D:\\Log.txt", totalPrice.ToString());
+            this.Log(totalPrice);
 
             return totalPrice;
+        }
+
+        protected virtual void Log(decimal totalPrice)
+        {
+            File.WriteAllText("D:\\Log.txt", totalPrice.ToString());
         }
 
         public List<Shipping> GetShippingList()
@@ -75,7 +80,7 @@ namespace HomeWork
         /// <summary>
         /// 購物車可用的物流方式
         /// </summary>
-        private List<Shipping> ShippingList = new List<Shipping>();    
+        private List<Shipping> ShippingList = new List<Shipping>();
 
         /// <summary>
         /// 將不同的集數的書合成一套打包,

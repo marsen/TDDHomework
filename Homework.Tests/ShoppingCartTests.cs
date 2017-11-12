@@ -149,5 +149,47 @@ namespace HomeWork.Tests
             //// Assert
             actual.ShouldBeEquivalentTo(excepted);
         }
+
+        #region
+
+        ////// Scenario:寫交易記錄到檔案
+        ////// Given:購物車已有書本
+        ////// When:購物車結帳時
+        ////// Then:寫交易記錄到檔案
+
+        #endregion
+
+        [Fact]
+        public void Test_CheckOut_Log()
+        {
+            //// Arrange
+            var target = new StubShoppingCart();
+            var bookList = new List<Book>
+            {
+                new Book
+                {
+                    price = 100,
+                    episode = 1
+                }
+            };
+
+            //// Act
+            target.CheckOut(bookList);
+            var actual = target.isLoged;
+
+            //// Assert
+            Assert.True(actual);
+        }
+
+        private class StubShoppingCart : ShoppingCart
+        {
+            public bool isLoged;
+
+            protected override void Log(decimal totalPrice)
+            {
+                this.isLoged = true;
+                base.Log(totalPrice);
+            }
+        }
     }
 }
