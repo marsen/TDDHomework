@@ -188,14 +188,14 @@ namespace HomeWork.Tests
         ////// Then:檢查通過
         #endregion
 
-        [Fact]
-        public void BookList_limit_is_30_books_Test()
+        [Theory]
+        [InlineData(30, true)]
+        public void BookList_limit_is_30_books_Test(int bookCount, bool expected)
         {
             //// Arrange
             var target = new StubShoppingCart();
             var bookList = new List<Book>();
-            var expected = true;
-            for (int i = 0; i < 30; i++)
+            for (int i = 0; i < bookCount; i++)
             {
                 bookList.Add(new Book
                 {
