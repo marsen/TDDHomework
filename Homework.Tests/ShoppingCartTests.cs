@@ -215,6 +215,35 @@ namespace HomeWork.Tests
             actual.Should().Be(expected);
         }
 
+        #region
+        ////// Scenario:檢查總共不能超過 30 本
+        ////// Given:購物車已有書本31
+        ////// When:購物車結帳時
+        ////// Then:拋出例外
+        #endregion
+
+        [Fact]
+        public void BookList_Over_30_Should_Throw_Exception_Test()
+        {
+            //// Arrange
+            var target = new ShoppingCart();
+            var bookList = new List<Book>();
+            for (int i = 0; i < 31; i++)
+            {
+                bookList.Add(new Book
+                {
+                    price = 100,
+                    episode = 1
+                });
+            }
+
+            //// Act
+            Action act = () => target.CheckOut(bookList);
+
+            //// Assert
+            act.ShouldThrow<ApplicationException>("書本超過上限");
+        }
+
         private class StubShoppingCart : ShoppingCart
         {
             public bool isLoged;
