@@ -266,24 +266,25 @@ namespace HomeWork.Tests
         ////// Then: 檢查通過
         #endregion
 
-        [Fact]
-        public void Same_Episode_Up_to_5_Test()
+        [Theory]
+        [InlineData("1,2,3,4,5", true)]
+        public void Same_Episode_Up_to_5_Test(string bookEpisodeList, bool expected)
         {
             //// Arrange
             var target = new StubShoppingCart();
-            var expected = true;
             var actual = false;
-            var bookList = new List<Book>();
-            for (int i = 0; i < 5; i++)
+            var bookList = bookEpisodeList.Split(',');
+            var checkoutList = new List<Book>();
+            for (int i = 0; i < bookList.Length; i++)
             {
-                bookList.Add(new Book
+                checkoutList.Add(new Book
                 {
                     price = 100,
-                    episode = 1 + i
+                    episode = int.Parse(bookList[i])
                 });
             }
             //// Act
-            target.CheckOut(bookList);
+            target.CheckOut(checkoutList);
             actual = target.isChecked;
             //// Assert
             actual.Should().Be(expected);
