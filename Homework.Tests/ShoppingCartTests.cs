@@ -259,6 +259,36 @@ namespace HomeWork.Tests
             act.ShouldThrow<ApplicationException>("書本超過上限");
         }
 
+        #region
+        ////// Scenario: 每一集最多買 5 本
+        ////// Given: 購物車已有書本 1,2,3,4,5 集
+        ////// When: 購物車結帳時
+        ////// Then: 檢查通過
+        #endregion
+
+        [Fact]
+        public void Same_Episode_Up_to_5_Test()
+        {
+            //// Arrange
+            var target = new StubShoppingCart();
+            var expected = true;
+            var actual = false;
+            var bookList = new List<Book>();
+            for (int i = 0; i < 5; i++)
+            {
+                bookList.Add(new Book
+                {
+                    price = 100,
+                    episode = 1 + i
+                });
+            }
+            //// Act
+            target.CheckOut(bookList);
+            actual = target.isChecked;
+            //// Assert
+            actual.Should().Be(expected);
+        }
+
         private class StubShoppingCart : ShoppingCart
         {
             public bool isLoged;
