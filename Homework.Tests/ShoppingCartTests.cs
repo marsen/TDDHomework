@@ -274,12 +274,18 @@ namespace HomeWork.Tests
         ////// Given: 購物車已有書本 1 集 5 本 2 集 2 本
         ////// When: 購物車結帳時
         ////// Then: 檢查通過
+
+        ////// Scenario: 每一集最多買 5 本
+        ////// Given: 購物車已有書本 3 集 5 本 4 集 6 本
+        ////// When: 購物車結帳時
+        ////// Then: 檢查不通過
         #endregion
 
         [Theory]
         [InlineData("1,2,3,4,5", true)]
         [InlineData("1,1,1,1,1,1", false)]
         [InlineData("1,1,1,1,1,2,2", true)]
+        [InlineData("3,3,3,3,3,4,4,4,4,4,4", false)]
         public void Same_Episode_Up_to_5_Test(string bookEpisodeList, bool expected)
         {
             //// Arrange
