@@ -181,9 +181,40 @@ namespace HomeWork.Tests
             Assert.True(actual);
         }
 
+        #region
+        ////// Scenario:檢查總共不能超過 30 本
+        ////// Given:購物車已有書本30
+        ////// When:購物車結帳時
+        ////// Then:檢查通過
+        #endregion
+
+        [Fact]
+        public void BookList_limit_is_30_books_Test()
+        {
+            //// Arrange
+            var target = new StubShoppingCart();
+            var bookList = new List<Book>();
+            var expected = true;
+            for (int i = 0; i < 30; i++)
+            {
+                bookList.Add(new Book
+                {
+                    price = 100,
+                    episode = 1
+                });
+            }
+
+            //// Act
+            target.CheckOut(bookList);
+            var actual = target.isChecked;
+            //// Assert
+            actual.Should().Be(expected);
+        }
+
         private class StubShoppingCart : ShoppingCart
         {
             public bool isLoged;
+            internal object isChecked;
 
             protected override void Log(decimal totalPrice)
             {
