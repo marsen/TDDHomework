@@ -218,7 +218,7 @@ namespace HomeWork.Tests
                 bookList.Add(new Book
                 {
                     price = 100,
-                    episode = 1
+                    episode = i
                 });
             }
 
