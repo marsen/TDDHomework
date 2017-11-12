@@ -76,6 +76,14 @@ namespace HomeWork
             {
                 throw new ApplicationException("Up to 30 books");
             }
+            var episodeGroup = bookList.GroupBy(x => x.episode);
+            foreach (var episode in episodeGroup)
+            {
+                if (episode.Count() > 5)
+                {
+                    throw new ApplicationException("Every Episode Up to 5 books");
+                }
+            }
         }
 
         protected virtual void Log(decimal totalPrice)
